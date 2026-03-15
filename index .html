@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Worker Connections - India's #1 local manufacturing job platform. Connect welders, CNC operators, lathe operators, assembly workers with local factories. Free for workers. No resume needed." />
+  <meta name="keywords" content="manufacturing jobs, factory jobs, welder jobs, CNC operator jobs, lathe operator, assembly worker, factory worker, industrial jobs, Pune jobs, Mumbai jobs, Maharashtra jobs, worker connections" />
+  <meta name="author" content="Worker Connections" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Worker Connections - Find Factory Jobs Near You" />
+  <meta property="og:description" content="Connect skilled manufacturing workers with local factories. Welders, CNC operators, assembly workers — get hired in 24 hours. Free for workers." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://workerconnections.in" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Worker Connections - Factory Jobs India" />
+  <meta name="twitter:description" content="Find manufacturing jobs near you. Free. No resume needed." />
+  <title>Worker Connections | Manufacturing Jobs Platform India</title>
+  <link rel="canonical" href="https://workerconnections.in" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Structured Data for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Worker Connections",
+    "url": "https://workerconnections.in",
+    "description": "India's #1 local manufacturing job matching platform connecting workers with factories.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://workerconnections.in/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <style>
+    /* ── RESET & VARIABLES ─────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #f5f7fa;
+      --bg2: #eef1f6;
+      --sur: #ffffff;
+      --pri: #2563eb;
+      --pli: #eff4ff;
+      --pdk: #1d4ed8;
+      --tx: #1e293b;
+      --t2: #475569;
+      --mu: #94a3b8;
+      --bd: #e2e8f0;
+      --b2: #cbd5e1;
+      --ok: #16a34a;
+      --okb: #f0fdf4;
+      --er: #dc2626;
+      --erb: #fef2f2;
+      --wn: #d97706;
+      --wnb: #fffbeb;
+      --inf: #0369a1;
+      --inb: #f0f9ff;
+      --r: 8px;
+      --sh: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
+      --shm: 0 4px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.04);
+      --shl: 0 10px 30px rgba(0,0,0,.12);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Barlow', sans-serif; background: var(--bg); color: var(--tx); overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg2); }
+    ::-webkit-scrollbar-thumb { background: var(--b2); border-radius: 4px; }
+
+    /* ── TYPOGRAPHY ────────────────────────────────────── */
+    .condensed { font-family: 'Barlow Condensed', sans-serif; }
+
+    /* ── NAVBAR ────────────────────────────────────────── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      background: rgba(255,255,255,0.97); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--bd);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2rem; height: 64px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; cursor: pointer; text-decoration: none; }
+    .nav-logo-icon { width: 36px; height: 36px; background: var(--pri); display: grid; place-items: center; border-radius: 8px; font-size: 18px; flex-shrink: 0; }
+    .nav-logo-text { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.2rem; text-transform: uppercase; letter-spacing: .04em; color: var(--tx); white-space: nowrap; }
+    .nav-logo-text span { color: var(--pri); }
+    .nav-links { display: flex; gap: 2px; }
+    .nav-link { padding: 7px 13px; border-radius: var(--r); font-size: .84rem; font-weight: 500; cursor: pointer; transition: all .18s; color: var(--t2); border: none; background: none; font-family: 'Barlow', sans-serif; }
+    .nav-link:hover { background: var(--bg2); color: var(--tx); }
+    .nav-link.active { background: var(--pli); color: var(--pri); font-weight: 600; }
+    .nav-actions { display: flex; gap: 8px; align-items: center; }
+    .nav-avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--pri); color: white; display: grid; place-items: center; font-weight: 700; font-size: .84rem; cursor: pointer; box-shadow: 0 1px 4px rgba(37,99,235,.4); border: none; }
+    .nav-hamburger { display: none; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--tx); padding: 4px; }
+
+    /* ── BUTTONS ───────────────────────────────────────── */
+    .btn { padding: 8px 18px; border-radius: var(--r); font-weight: 600; cursor: pointer; border: none; font-size: .85rem; transition: all .18s; font-family: 'Barlow', sans-serif; display: inline-flex; align-items: center; gap: 6px; }
+    .btn-primary { background: var(--pri); color: #fff; box-shadow: 0 1px 3px rgba(37,99,235,.3); }
+    .btn-primary:hover { background: var(--pdk); transform: translateY(-1px); box-shadow: 0 4px 10px rgba(37,99,235,.3); }
+    .btn-ghost { background: transparent; border: 1.5px solid var(--b2); color: var(--t2); }
+    .btn-ghost:hover { border-color: var(--pri); color: var(--pri); background: var(--pli); }
+    .btn-outline { background: transparent; border: 1.5px solid var(--pri); color: var(--pri); }
+    .btn-outline:hover { background: var(--pri); color: #fff; }
+    .btn-light { background: var(--bg2); color: var(--t2); border: 1px solid var(--bd); }
+    .btn-light:hover { background: var(--bd); }
+    .btn-success { background: var(--ok); color: #fff; }
+    .btn-success:hover { filter: brightness(1.08); }
+    .btn-danger { background: var(--er); color: #fff; }
+    .btn-sm { padding: 6px 13px; font-size: .78rem; }
+    .btn-lg { padding: 13px 28px; font-size: 1rem; }
+    .btn-block { width: 100%; justify-content: center; }
+
+    /* ── LAYOUT ────────────────────────────────────────── */
+    .page { min-height: 100vh; padding-top: 64px; background: var(--bg); }
+    .hidden { display: none !important; }
+    .section { padding: 4rem 2rem; }
+    .section-alt { background: var(--sur); border-top: 1px solid var(--bd); border-bottom: 1px solid var(--bd); }
+    .section-light { background: var(--bg2); }
+    .inner { max-width: 1100px; margin: 0 auto; }
+    .sec-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .14em; color: var(--pri); font-weight: 700; margin-bottom: .4rem; }
+    .sec-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(1.7rem,3vw,2.4rem); text-transform: uppercase; color: var(--tx); }
+    .sec-sub { color: var(--mu); margin-top: .4rem; font-size: .92rem; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.25rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 1.25rem; }
+    .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(195px,1fr)); gap: 1rem; }
+
+    /* ── HERO ──────────────────────────────────────────── */
+    .hero { position: relative; overflow: hidden; padding: 5rem 2rem 4rem; background: linear-gradient(135deg,#eff6ff 0%,#f0f9ff 50%,#f5f3ff 100%); border-bottom: 1px solid var(--bd); }
+    .hero-dots { position: absolute; inset: 0; opacity: .35; background-image: radial-gradient(var(--b2) 1.5px, transparent 1.5px); background-size: 28px 28px; pointer-events: none; }
+    .hero-glow { position: absolute; top: -80px; right: -80px; width: 480px; height: 480px; background: radial-gradient(circle,rgba(37,99,235,.08) 0%,transparent 70%); pointer-events: none; }
+    .hero-content { max-width: 1100px; margin: 0 auto; position: relative; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; background: var(--pli); border: 1px solid rgba(37,99,235,.2); border-radius: 20px; font-size: .76rem; font-weight: 700; color: var(--pri); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 1.5rem; }
+    .hero-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.8rem,7vw,5.2rem); text-transform: uppercase; line-height: .95; margin-bottom: 1.25rem; color: var(--tx); }
+    .hero-title .accent { color: var(--pri); }
+    .hero-title .dim { color: var(--mu); font-size: .68em; }
+    .hero-sub { font-size: 1.05rem; color: var(--t2); max-width: 540px; line-height: 1.75; margin-bottom: 2.5rem; }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
+    .hero-stats { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .stat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 800; color: var(--pri); }
+    .stat-lbl { font-size: .73rem; color: var(--mu); text-transform: uppercase; letter-spacing: .06em; }
+
+    /* ── TICKER ────────────────────────────────────────── */
+    .ticker { background: var(--pri); padding: 9px 0; overflow: hidden; white-space: nowrap; }
+    .ticker-track { display: inline-flex; gap: 3rem; animation: tickermove 35s linear infinite; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; font-size: .84rem; color: white; }
+    @keyframes tickermove { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .ticker-sep { opacity: .45; }
+
+    /* ── SEARCH BAR ────────────────────────────────────── */
+    .search-wrap { display: flex; background: var(--sur); border: 1.5px solid var(--b2); border-radius: 10px; overflow: hidden; box-shadow: var(--sh); max-width: 700px; }
+    .search-wrap input { flex: 1; background: transparent; border: none; padding: 13px 16px; color: var(--tx); font-size: .95rem; font-family: 'Barlow', sans-serif; outline: none; min-width: 0; }
+    .search-wrap input::placeholder { color: var(--mu); }
+    .search-wrap select { background: var(--bg2); border: none; border-left: 1.5px solid var(--bd); border-right: 1.5px solid var(--bd); padding: 0 12px; color: var(--t2); font-family: 'Barlow', sans-serif; font-size: .86rem; outline: none; cursor: pointer; min-width: 120px; }
+    .search-wrap button { background: var(--pri); border: none; padding: 13px 20px; color: white; font-weight: 700; cursor: pointer; font-family: 'Barlow', sans-serif; font-size: .88rem; transition: background .18s; white-space: nowrap; }
+    .search-wrap button:hover { background: var(--pdk); }
+
+    /* ── FILTER PILLS ──────────────────────────────────── */
+    .pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 1rem; }
+    .pill { padding: 5px 14px; border-radius: 20px; font-size: .78rem; cursor: pointer; border: 1.5px solid var(--b2); color: var(--t2); transition: all .18s; font-weight: 500; background: var(--sur); user-select: none; }
+    .pill:hover { border-color: var(--pri); color: var(--pri); background: var(--pli); }
+    .pill.on { background: var(--pri); border-color: var(--pri); color: white; }
+
+    /* ── CARDS ─────────────────────────────────────────── */
+    .card { background: var(--sur); border: 1px solid var(--bd); border-radius: 10px; padding: 1.4rem; transition: all .22s; box-shadow: var(--sh); }
+    .card:hover { border-color: var(--pri); box-shadow: var(--shm); transform: translateY(-2px); }
+
+    /* ── JOB CARD ──────────────────────────────────────── */
+    .jcard { background: var(--sur); border: 1px solid var(--bd); border-radius: 10px; padding: 1.25rem; transition: all .22s; box-shadow: var(--sh); display: flex; flex-direction: column; gap: .5rem; }
+    .jcard:hover { border-color: rgba(37,99,235,.4); box-shadow: var(--shm); transform: translateY(-2px); }
+    .jcard-top { display: flex; justify-content: space-between; align-items: flex-start; gap: .5rem; }
+    .jcard-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.15rem; text-transform: uppercase; color: var(--tx); }
+    .jcard-co { font-size: .81rem; color: var(--mu); margin-top: 2px; }
+    .jcard-meta { display: flex; gap: .9rem; flex-wrap: wrap; }
+    .jcard-meta span { font-size: .78rem; color: var(--mu); }
+    .jcard-salary { font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--pri); }
+    .jcard-tags { display: flex; gap: 5px; flex-wrap: wrap; }
+    .jcard-foot { display: flex; justify-content: space-between; align-items: center; padding-top: .9rem; border-top: 1px solid var(--bd); margin-top: auto; }
+
+    /* ── BADGES ────────────────────────────────────────── */
+    .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: .69rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; }
+    .b-urgent { background: var(--erb); color: var(--er); border: 1px solid rgba(220,38,38,.2); }
+    .b-open { background: var(--okb); color: var(--ok); border: 1px solid rgba(22,163,74,.2); }
+    .b-skill { background: var(--inb); color: var(--inf); border: 1px solid rgba(3,105,161,.15); }
+    .b-exp { background: var(--wnb); color: var(--wn); border: 1px solid rgba(217,119,6,.2); }
+
+    /* ── WORKER CARD ───────────────────────────────────── */
+    .wcard { background: var(--sur); border: 1px solid var(--bd); border-radius: 10px; padding: 1.4rem; transition: all .22s; text-align: center; box-shadow: var(--sh); }
+    .wcard:hover { border-color: rgba(37,99,235,.3); box-shadow: var(--shm); transform: translateY(-2px); }
+    .wavatar { width: 60px; height: 60px; border-radius: 50%; display: grid; place-items: center; font-size: 1.4rem; font-weight: 800; margin: 0 auto .9rem; }
+    .wname { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.12rem; text-transform: uppercase; color: var(--tx); }
+    .wskill { font-size: .82rem; color: var(--pri); font-weight: 600; margin: 4px 0; }
+    .wloc { font-size: .77rem; color: var(--mu); margin-bottom: .6rem; }
+    .stars { display: flex; gap: 2px; justify-content: center; color: #f59e0b; font-size: .88rem; margin-bottom: .7rem; }
+
+    /* ── FEATURE CARD ──────────────────────────────────── */
+    .ficon { width: 46px; height: 46px; background: var(--pli); border: 1px solid rgba(37,99,235,.15); border-radius: 10px; display: grid; place-items: center; font-size: 1.3rem; margin-bottom: .9rem; }
+    .ftitle { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.08rem; text-transform: uppercase; margin-bottom: .4rem; color: var(--tx); }
+    .ftext { font-size: .85rem; color: var(--t2); line-height: 1.65; }
+
+    /* ── STEPS ─────────────────────────────────────────── */
+    .steps-box { background: var(--pli); border: 1px solid rgba(37,99,235,.15); border-radius: 12px; padding: 1.5rem; }
+    .steps-box.blue { background: var(--inb); border-color: rgba(3,105,161,.15); }
+    .steps-head { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1rem; text-transform: uppercase; color: var(--pri); margin-bottom: 1.2rem; letter-spacing: .06em; }
+    .steps-box.blue .steps-head { color: var(--inf); }
+    .steps-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: .5rem; }
+    .step { text-align: center; padding: .75rem .5rem; position: relative; }
+    .step:not(:last-child)::after { content: '→'; position: absolute; right: -8px; top: 40%; color: var(--b2); font-size: 1.1rem; }
+    .step-n { font-family: 'Barlow Condensed', sans-serif; font-size: 2.4rem; font-weight: 900; color: rgba(37,99,235,.12); line-height: 1; }
+    .step-t { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1rem; text-transform: uppercase; margin: .3rem 0 .2rem; color: var(--tx); }
+    .step-d { font-size: .78rem; color: var(--mu); }
+
+    /* ── FORMS ─────────────────────────────────────────── */
+    .form-box { background: var(--sur); border: 1px solid var(--bd); border-radius: 12px; padding: 2rem; box-shadow: var(--shm); }
+    .form-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.7rem; text-transform: uppercase; color: var(--tx); margin-bottom: .2rem; }
+    .form-sub { color: var(--mu); font-size: .86rem; margin-bottom: 1.5rem; }
+    .form-grid { display: grid; gap: 1rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .fgroup { display: flex; flex-direction: column; gap: 5px; }
+    .flabel { font-size: .74rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--t2); }
+    .finput, .fselect, .ftextarea {
+      background: var(--sur); border: 1.5px solid var(--b2); border-radius: var(--r);
+      padding: 10px 14px; color: var(--tx); font-size: .9rem; font-family: 'Barlow', sans-serif;
+      transition: border-color .18s, box-shadow .18s; outline: none; width: 100%;
+    }
+    .finput:focus, .fselect:focus, .ftextarea:focus { border-color: var(--pri); box-shadow: 0 0 0 3px rgba(37,99,235,.1); }
+    .finput::placeholder { color: var(--mu); }
+    .fselect option { background: white; color: var(--tx); }
+    .ftextarea { resize: vertical; min-height: 90px; }
+    .fswitch { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: .75rem; font-size: .84rem; color: var(--mu); }
+    .fswitch a { color: var(--pri); cursor: pointer; text-decoration: underline; }
+    .skill-chips { display: flex; flex-wrap: wrap; gap: 7px; }
+    .chip { padding: 5px 12px; border-radius: 20px; font-size: .75rem; font-weight: 600; cursor: pointer; border: 1.5px solid var(--b2); color: var(--t2); transition: all .18s; text-transform: uppercase; background: var(--sur); user-select: none; }
+    .chip:hover, .chip.on { background: var(--pli); border-color: var(--pri); color: var(--pri); }
+
+    /* ── TABS ──────────────────────────────────────────── */
+    .tabs { display: flex; border-bottom: 2px solid var(--bd); margin-bottom: 1.5rem; overflow-x: auto; }
+    .tab { padding: 9px 18px; font-size: .82rem; font-weight: 600; cursor: pointer; color: var(--mu); border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all .18s; text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; background: none; border-left: none; border-right: none; border-top: none; font-family: 'Barlow', sans-serif; }
+    .tab:hover { color: var(--tx); }
+    .tab.on { color: var(--pri); border-bottom-color: var(--pri); }
+
+    /* ── DASHBOARD ─────────────────────────────────────── */
+    .dash-wrap { display: grid; grid-template-columns: 220px 1fr; min-height: calc(100vh - 64px); }
+    .dash-side { background: var(--sur); border-right: 1px solid var(--bd); padding: 1.25rem 0; }
+    .dash-user { padding: .75rem 1.25rem 1rem; border-bottom: 1px solid var(--bd); margin-bottom: .5rem; display: flex; align-items: center; gap: 10px; }
+    .dash-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--pri); color: white; display: grid; place-items: center; font-weight: 700; flex-shrink: 0; box-shadow: 0 1px 4px rgba(37,99,235,.35); }
+    .dash-uname { font-weight: 700; font-size: .88rem; color: var(--tx); }
+    .dash-urole { font-size: .73rem; color: var(--mu); }
+    .dash-nav { padding: 0 .75rem; }
+    .dash-link { display: flex; align-items: center; gap: 10px; padding: 9px 12px; cursor: pointer; font-size: .85rem; color: var(--t2); transition: all .18s; font-weight: 500; border-radius: 8px; margin-bottom: 2px; border: none; background: none; width: 100%; font-family: 'Barlow', sans-serif; }
+    .dash-link:hover { background: var(--bg2); color: var(--tx); }
+    .dash-link.on { background: var(--pli); color: var(--pri); font-weight: 600; }
+    .dash-icon { font-size: 1rem; width: 20px; text-align: center; flex-shrink: 0; }
+    .dash-main { padding: 2rem; overflow-y: auto; background: var(--bg); }
+    .dash-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.8rem; text-transform: uppercase; color: var(--tx); }
+    .dash-sub { color: var(--mu); font-size: .85rem; margin-top: 3px; margin-bottom: 1.5rem; }
+    .stat-cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap: 1rem; margin-bottom: 1.75rem; }
+    .scard { background: var(--sur); border: 1px solid var(--bd); border-radius: 10px; padding: 1.2rem; box-shadow: var(--sh); }
+    .scard-num { font-family: 'Barlow Condensed', sans-serif; font-size: 2.1rem; font-weight: 800; color: var(--pri); }
+    .scard-lbl { font-size: .74rem; color: var(--mu); text-transform: uppercase; letter-spacing: .06em; margin-top: 2px; }
+    .list-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 11px 0; border-bottom: 1px solid var(--bd); }
+    .list-row:last-child { border-bottom: none; }
+    .prog-wrap { background: var(--bg2); border-radius: 4px; height: 7px; overflow: hidden; border: 1px solid var(--bd); flex: 1; }
+    .prog-bar { background: var(--pri); height: 100%; border-radius: 4px; }
+
+    /* ── CHAT ──────────────────────────────────────────── */
+    .chat-wrap { display: grid; grid-template-columns: 270px 1fr; height: calc(100vh - 64px); }
+    .chat-side { background: var(--sur); border-right: 1px solid var(--bd); overflow-y: auto; display: flex; flex-direction: column; }
+    .chat-side-head { padding: .9rem 1.2rem; border-bottom: 1px solid var(--bd); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1rem; text-transform: uppercase; color: var(--tx); }
+    .chat-contact { display: flex; align-items: center; gap: 11px; padding: 11px 1.2rem; cursor: pointer; border-bottom: 1px solid var(--bd); transition: background .18s; }
+    .chat-contact:hover, .chat-contact.on { background: var(--pli); }
+    .chat-av { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: .86rem; flex-shrink: 0; }
+    .chat-cname { font-weight: 600; font-size: .87rem; color: var(--tx); }
+    .chat-cprev { font-size: .75rem; color: var(--mu); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .chat-main-area { display: flex; flex-direction: column; background: var(--bg); }
+    .chat-topbar { padding: .9rem 1.4rem; border-bottom: 1px solid var(--bd); display: flex; align-items: center; gap: 11px; background: var(--sur); }
+    .chat-online { font-size: .72rem; color: var(--ok); }
+    .chat-msgs { flex: 1; overflow-y: auto; padding: 1.4rem; display: flex; flex-direction: column; gap: .9rem; }
+    .msg-wrap { display: flex; gap: 9px; max-width: 72%; }
+    .msg-wrap.me { align-self: flex-end; flex-direction: row-reverse; }
+    .msg-bub { padding: 9px 13px; border-radius: 12px; font-size: .86rem; line-height: 1.55; }
+    .msg-wrap.them .msg-bub { background: var(--sur); border: 1px solid var(--bd); color: var(--tx); }
+    .msg-wrap.me .msg-bub { background: var(--pri); color: white; }
+    .msg-time { font-size: .68rem; color: var(--mu); align-self: flex-end; margin-bottom: 3px; }
+    .chat-input-row { padding: .9rem 1.4rem; border-top: 1px solid var(--bd); display: flex; gap: 9px; background: var(--sur); }
+    .chat-input { flex: 1; background: var(--bg2); border: 1.5px solid var(--bd); border-radius: 24px; padding: 9px 17px; color: var(--tx); font-family: 'Barlow', sans-serif; font-size: .88rem; outline: none; }
+    .chat-input:focus { border-color: var(--pri); }
+    .chat-send { width: 40px; height: 40px; border-radius: 50%; background: var(--pri); border: none; color: white; cursor: pointer; font-size: .95rem; display: grid; place-items: center; transition: background .18s; flex-shrink: 0; }
+    .chat-send:hover { background: var(--pdk); }
+
+    /* ── MODAL ─────────────────────────────────────────── */
+    .modal-ov { position: fixed; inset: 0; background: rgba(15,23,42,.5); z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 1rem; backdrop-filter: blur(4px); }
+    .modal-box { background: var(--sur); border: 1px solid var(--bd); border-radius: 12px; width: 100%; max-width: 510px; max-height: 92vh; overflow-y: auto; padding: 2rem; position: relative; box-shadow: var(--shl); }
+    .modal-close { position: absolute; top: 1rem; right: 1rem; background: var(--bg2); border: none; color: var(--mu); width: 28px; height: 28px; border-radius: 50%; font-size: .82rem; cursor: pointer; transition: all .18s; display: grid; place-items: center; }
+    .modal-close:hover { background: var(--bd); color: var(--tx); }
+    .type-toggle { display: flex; gap: 8px; margin-bottom: 1.25rem; }
+    .type-btn { flex: 1; padding: 8px; border-radius: var(--r); font-size: .83rem; font-weight: 600; cursor: pointer; border: 1.5px solid var(--b2); color: var(--t2); background: var(--sur); transition: all .18s; font-family: 'Barlow', sans-serif; }
+    .type-btn.on { background: var(--pri); border-color: var(--pri); color: white; }
+
+    /* ── TOAST ─────────────────────────────────────────── */
+    .toast { position: fixed; bottom: 2rem; right: 2rem; z-index: 99999; background: var(--ok); color: white; padding: 12px 20px; border-radius: 10px; font-weight: 600; font-size: .86rem; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 16px rgba(22,163,74,.35); animation: slideup .3s ease; pointer-events: none; }
+    @keyframes slideup { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+    /* ── CTA BANNER ────────────────────────────────────── */
+    .cta-banner { background: linear-gradient(135deg,#2563eb,#1d4ed8); padding: 4rem 2rem; text-align: center; }
+    .cta-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2rem,5vw,3.2rem); text-transform: uppercase; line-height: .95; margin-bottom: 1rem; color: white; }
+    .cta-sub { opacity: .88; margin-bottom: 2rem; font-size: .98rem; color: white; }
+
+    /* ── FOOTER ────────────────────────────────────────── */
+    .footer { background: #1e293b; color: #94a3b8; padding: 3rem 2rem 2rem; }
+    .footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
+    .footer-desc { font-size: .83rem; line-height: 1.7; margin-top: .75rem; max-width: 280px; color: #64748b; }
+    .footer-col-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: .9rem; text-transform: uppercase; letter-spacing: .07em; margin-bottom: .9rem; color: #e2e8f0; }
+    .footer-links { display: flex; flex-direction: column; gap: 8px; }
+    .footer-link { color: #64748b; font-size: .82rem; cursor: pointer; transition: color .18s; }
+    .footer-link:hover { color: #94a3b8; }
+    .footer-bot { max-width: 1100px; margin: 2rem auto 0; padding-top: 1.25rem; border-top: 1px solid #334155; display: flex; justify-content: space-between; font-size: .75rem; color: #475569; flex-wrap: wrap; gap: .5rem; }
+
+    /* ── VIDEO PLACEHOLDER ─────────────────────────────── */
+    .vid-ph { background: var(--bg2); border: 2px dashed var(--b2); border-radius: 8px; height: 130px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; cursor: pointer; transition: all .18s; }
+    .vid-ph:hover { border-color: var(--pri); background: var(--pli); }
+
+    /* ── NOTIFICATION DOT ──────────────────────────────── */
+    .notif-dot { width: 8px; height: 8px; background: var(--pri); border-radius: 50%; display: inline-block; flex-shrink: 0; }
+
+    /* ── MOBILE NAV ────────────────────────────────────── */
+    .mobile-nav { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--sur); border-bottom: 1px solid var(--bd); z-index: 998; flex-direction: column; padding: .5rem; box-shadow: var(--shm); }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav .nav-link { text-align: left; border-radius: var(--r); }
+
+    /* ── RESPONSIVE ────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: block; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .dash-wrap { grid-template-columns: 1fr; }
+      .dash-side { display: none; }
+      .chat-wrap { grid-template-columns: 1fr; }
+      .chat-side { display: none; }
+    }
+    @media (max-width: 640px) {
+      .hero { padding: 3rem 1rem 2.5rem; }
+      .hero-stats { gap: 1.5rem; }
+      .section { padding: 2.5rem 1rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .step:not(:last-child)::after { display: none; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .search-wrap select { display: none; }
+      .cta-banner { padding: 2.5rem 1rem; }
+    }
+    @media (max-width: 400px) {
+      .nav { padding: 0 1rem; }
+      .nav-logo-text { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ░░ NAVBAR ░░ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a class="nav-logo" href="#" onclick="showPage('home');return false;" aria-label="Worker Connections Home">
+    <div class="nav-logo-icon" aria-hidden="true">⚙️</div>
+    <div class="nav-logo-text">Worker <span>Connections</span></div>
+  </a>
+  <div class="nav-links" role="menubar">
+    <button class="nav-link active" id="nl-home" onclick="showPage('home')" role="menuitem">Home</button>
+    <button class="nav-link" id="nl-jobs" onclick="showPage('jobs')" role="menuitem">Browse Jobs</button>
+    <button class="nav-link" id="nl-workers" onclick="showPage('workers')" role="menuitem">Find Workers</button>
+    <button class="nav-link" id="nl-postjob" onclick="showPage('postjob')" role="menuitem">Post a Job</button>
+    <button class="nav-link hidden" id="nl-dashboard" onclick="showPage('dashboard')" role="menuitem">Dashboard</button>
+    <button class="nav-link hidden" id="nl-chat" onclick="showPage('chat')" role="menuitem">💬 Chat</button>
+  </div>
+  <div class="nav-actions">
+    <button class="btn btn-ghost btn-sm" id="btn-login" onclick="openModal('login')" aria-label="Login">Login</button>
+    <button class="btn btn-primary btn-sm" id="btn-register" onclick="openModal('register')" aria-label="Register for free">Register Free</button>
+    <button class="nav-avatar hidden" id="nav-avatar-btn" onclick="showPage('dashboard')" aria-label="Dashboard">W</button>
+    <button class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobile-nav" role="menu">
+  <button class="nav-link" onclick="showPage('home');closeMobileNav()" role="menuitem">Home</button>
+  <button class="nav-link" onclick="showPage('jobs');closeMobileNav()" role="menuitem">Browse Jobs</button>
+  <button class="nav-link" onclick="showPage('workers');closeMobileNav()" role="menuitem">Find Workers</button>
+  <button class="nav-link" onclick="showPage('postjob');closeMobileNav()" role="menuitem">Post a Job</button>
+  <button class="nav-link hidden" id="mn-dashboard" onclick="showPage('dashboard');closeMobileNav()" role="menuitem">Dashboard</button>
+  <button class="nav-link hidden" id="mn-chat" onclick="showPage('chat');closeMobileNav()" role="menuitem">💬 Chat</button>
+</div>
+
+<!-- ░░ HOME PAGE ░░ -->
+<main id="page-home" class="page" role="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-dots" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-badge">⚡ India's #1 Manufacturing Jobs Platform</div>
+      <h1 class="hero-title" id="hero-heading">
+        <div>Find Your</div>
+        <div class="accent">Factory Job</div>
+        <div class="dim">No Resume Needed</div>
+      </h1>
+      <p class="hero-sub">Connect skilled workers with local factories. Welders, CNC operators, lathe operators, assembly workers — get hired in 24 hours.</p>
+      <div class="hero-ctas">
+        <button class="btn btn-primary btn-lg" onclick="showPage('jobs')">🔍 Browse Jobs</button>
+        <button class="btn btn-ghost btn-lg" onclick="openModal('register')">Register Free →</button>
+      </div>
+      <div class="hero-stats" role="list">
+        <div role="listitem"><div class="stat-num">2,400+</div><div class="stat-lbl">Active Jobs</div></div>
+        <div role="listitem"><div class="stat-num">18,000+</div><div class="stat-lbl">Workers</div></div>
+        <div role="listitem"><div class="stat-num">850+</div><div class="stat-lbl">Factories</div></div>
+        <div role="listitem"><div class="stat-num">24hr</div><div class="stat-lbl">Avg. Hire Time</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>🔧 CNC Operator Needed — Pune <span class="ticker-sep">◆</span></span>
+      <span>🏭 Welder Urgently Required — Mumbai <span class="ticker-sep">◆</span></span>
+      <span>⚙️ Assembly Workers — Aurangabad <span class="ticker-sep">◆</span></span>
+      <span>🔩 Lathe Operator — Nashik <span class="ticker-sep">◆</span></span>
+      <span>🛠️ Maintenance Tech — Nagpur <span class="ticker-sep">◆</span></span>
+      <span>🏗️ Fabricator — Kolhapur <span class="ticker-sep">◆</span></span>
+      <span>🔧 CNC Operator Needed — Pune <span class="ticker-sep">◆</span></span>
+      <span>🏭 Welder Urgently Required — Mumbai <span class="ticker-sep">◆</span></span>
+      <span>⚙️ Assembly Workers — Aurangabad <span class="ticker-sep">◆</span></span>
+      <span>🔩 Lathe Operator — Nashik <span class="ticker-sep">◆</span></span>
+      <span>🛠️ Maintenance Tech — Nagpur <span class="ticker-sep">◆</span></span>
+      <span>🏗️ Fabricator — Kolhapur <span class="ticker-sep">◆</span></span>
+    </div>
+  </div>
+
+  <!-- SEARCH -->
+  <section class="section section-alt" aria-label="Job search">
+    <div class="inner">
+      <div class="sec-label">Quick Search</div>
+      <div class="sec-title" style="font-size:1.5rem;margin-bottom:1rem;">Find Jobs Near You</div>
+      <div class="search-wrap">
+        <input type="search" placeholder="Job title or skill (e.g. Welder, CNC...)" aria-label="Search jobs" id="home-search" />
+        <select aria-label="Select location" id="home-loc">
+          <option>All India</option><option>Pune</option><option>Mumbai</option>
+          <option>Nashik</option><option>Nagpur</option><option>Aurangabad</option><option>Kolhapur</option>
+        </select>
+        <button onclick="showPage('jobs')" aria-label="Search jobs">Search Jobs</button>
+      </div>
+      <div class="pills" role="list" aria-label="Filter by skill">
+        <span class="pill on" role="listitem">All</span>
+        <span class="pill" role="listitem">Welding</span>
+        <span class="pill" role="listitem">CNC</span>
+        <span class="pill" role="listitem">Lathe</span>
+        <span class="pill" role="listitem">Assembly</span>
+        <span class="pill" role="listitem">Technician</span>
+        <span class="pill" role="listitem">Helper</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED JOBS -->
+  <section class="section" aria-labelledby="jobs-heading">
+    <div class="inner">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2rem;flex-wrap:wrap;gap:1rem;">
+        <div><div class="sec-label">Latest Openings</div><div class="sec-title" id="jobs-heading">Featured Jobs</div></div>
+        <button class="btn btn-outline btn-sm" onclick="showPage('jobs')">View All Jobs →</button>
+      </div>
+      <div class="grid-3" id="home-jobs-grid"></div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section-alt" aria-labelledby="how-heading">
+    <div class="inner">
+      <div style="text-align:center;margin-bottom:2rem;">
+        <div class="sec-label">Process</div>
+        <div class="sec-title" id="how-heading">How Worker Connections Works</div>
+        <div class="sec-sub">Get hired in just 3 simple steps</div>
+      </div>
+      <div class="grid-2">
+        <div class="steps-box">
+          <div class="steps-head">👷 For Workers</div>
+          <div class="steps-grid">
+            <div class="step"><div class="step-n">01</div><div class="step-t">Register</div><div class="step-d">Create your profile with your skills</div></div>
+            <div class="step"><div class="step-n">02</div><div class="step-t">Browse</div><div class="step-d">Find jobs near your location</div></div>
+            <div class="step"><div class="step-n">03</div><div class="step-t">Apply</div><div class="step-d">One-tap apply &amp; chat with employer</div></div>
+          </div>
+        </div>
+        <div class="steps-box blue">
+          <div class="steps-head">🏭 For Employers</div>
+          <div class="steps-grid">
+            <div class="step"><div class="step-n" style="color:rgba(3,105,161,.12)">01</div><div class="step-t">Register</div><div class="step-d">Create your company profile</div></div>
+            <div class="step"><div class="step-n" style="color:rgba(3,105,161,.12)">02</div><div class="step-t">Post Job</div><div class="step-d">Add requirements &amp; salary</div></div>
+            <div class="step"><div class="step-n" style="color:rgba(3,105,161,.12)">03</div><div class="step-t">Hire</div><div class="step-d">Browse applicants &amp; contact directly</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section section-light" aria-labelledby="features-heading">
+    <div class="inner">
+      <div style="text-align:center;margin-bottom:2rem;">
+        <div class="sec-label">Why Choose Us</div>
+        <div class="sec-title" id="features-heading">Platform Features</div>
+      </div>
+      <div class="grid-4">
+        <div class="card"><div class="ficon">📍</div><div class="ftitle">Location-Based</div><div class="ftext">See jobs closest to you first. Filter by city, area, or distance.</div></div>
+        <div class="card"><div class="ficon">🎥</div><div class="ftitle">Skill Videos</div><div class="ftext">Upload a short work demo. Let employers see your actual skills.</div></div>
+        <div class="card"><div class="ficon">⚡</div><div class="ftitle">Instant Alerts</div><div class="ftext">Get notified the moment a matching job is posted nearby.</div></div>
+        <div class="card"><div class="ficon">💬</div><div class="ftitle">Direct Chat</div><div class="ftext">Talk directly with employers. No middlemen. Fast decisions.</div></div>
+        <div class="card"><div class="ficon">✅</div><div class="ftitle">Verified</div><div class="ftext">Both employers and workers are verified for safer hiring.</div></div>
+        <div class="card"><div class="ficon">📱</div><div class="ftitle">Mobile Ready</div><div class="ftext">Works on any phone. No app download needed.</div></div>
+        <div class="card"><div class="ficon">🆓</div><div class="ftitle">Free for Workers</div><div class="ftext">100% free to register and apply. Always.</div></div>
+        <div class="card"><div class="ficon">🏆</div><div class="ftitle">Skill Badges</div><div class="ftext">Earn badges as you complete jobs and get employer ratings.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED WORKERS -->
+  <section class="section section-alt" aria-labelledby="workers-heading">
+    <div class="inner">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2rem;flex-wrap:wrap;gap:1rem;">
+        <div><div class="sec-label">Top Talent</div><div class="sec-title" id="workers-heading">Featured Workers</div></div>
+        <button class="btn btn-outline btn-sm" onclick="showPage('workers')">View All Workers →</button>
+      </div>
+      <div class="grid-3" id="home-workers-grid"></div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner" aria-label="Call to action">
+    <div style="max-width:580px;margin:0 auto;">
+      <div class="cta-title">Ready to Find<br>Your Next Job?</div>
+      <p class="cta-sub">Join 18,000+ workers already using Worker Connections to find manufacturing jobs nearby.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <button class="btn btn-lg" style="background:white;color:var(--pri);font-weight:700;" onclick="openModal('register')">Register as Worker</button>
+        <button class="btn btn-lg" style="background:rgba(255,255,255,.15);color:white;font-weight:700;border:2px solid rgba(255,255,255,.35);" onclick="openModal('register')">Register as Employer</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:.75rem;">
+          <div style="width:34px;height:34px;background:var(--pri);display:grid;place-items:center;border-radius:8px;font-size:16px;">⚙️</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.2rem;text-transform:uppercase;color:#e2e8f0;">Worker <span style="color:#60a5fa;">Connections</span></div>
+        </div>
+        <div class="footer-desc">Connecting skilled manufacturing workers with local factories across India. Fast. Simple. Free for workers.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">For Workers</div>
+        <div class="footer-links">
+          <span class="footer-link" onclick="showPage('jobs')">Browse Jobs</span>
+          <span class="footer-link" onclick="openModal('register')">Create Profile</span>
+          <span class="footer-link">Upload Skills Video</span>
+          <span class="footer-link">Job Alerts</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">For Employers</div>
+        <div class="footer-links">
+          <span class="footer-link" onclick="showPage('postjob')">Post a Job</span>
+          <span class="footer-link" onclick="showPage('workers')">Browse Workers</span>
+          <span class="footer-link">Pricing</span>
+          <span class="footer-link">Verify Workers</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Support</div>
+        <div class="footer-links">
+          <span class="footer-link">Help Center</span>
+          <span class="footer-link">Contact Us</span>
+          <span class="footer-link">Privacy Policy</span>
+          <span class="footer-link">Terms of Service</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <span>© 2025 Worker Connections · Local Manufacturing Job Platform · Made in India 🇮🇳</span>
+      <span>Free for Workers · No Resume Needed</span>
+    </div>
+  </footer>
+</main>
+
+<!-- ░░ JOBS PAGE ░░ -->
+<main id="page-jobs" class="page hidden" role="main">
+  <div class="section section-alt" style="padding-bottom:1.5rem;">
+    <div class="inner">
+      <div class="sec-label">Browse Openings</div>
+      <div class="sec-title" style="margin-bottom:1.25rem;">Manufacturing Jobs</div>
+      <div class="search-wrap" style="margin-bottom:1rem;">
+        <input type="search" id="jobs-search" placeholder="Search job title or skill..." oninput="renderJobs()" aria-label="Search jobs" />
+        <select id="jobs-loc" onchange="renderJobs()" aria-label="Filter by location">
+          <option>All India</option><option>Pune</option><option>Mumbai</option>
+          <option>Nashik</option><option>Nagpur</option><option>Aurangabad</option><option>Kolhapur</option>
+        </select>
+        <button onclick="renderJobs()">Search</button>
+      </div>
+      <div class="pills" id="skill-pills" role="list" aria-label="Filter by skill"></div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="inner">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap;gap:.75rem;">
+        <div id="jobs-count" style="color:var(--mu);font-size:.88rem;font-weight:500;"></div>
+        <select class="finput" style="width:auto;padding:7px 12px;font-size:.83rem;" onchange="renderJobs()" id="jobs-sort" aria-label="Sort jobs">
+          <option>Latest First</option><option>Salary: High to Low</option>
+        </select>
+      </div>
+      <div class="grid-3" id="jobs-grid"></div>
+    </div>
+  </div>
+</main>
+
+<!-- ░░ WORKERS PAGE ░░ -->
+<main id="page-workers" class="page hidden" role="main">
+  <div class="section section-alt" style="padding-bottom:1.5rem;">
+    <div class="inner">
+      <div class="sec-label">Find Talent</div>
+      <div class="sec-title" style="margin-bottom:1.25rem;">Browse Skilled Workers</div>
+      <div class="search-wrap">
+        <input type="search" id="workers-search" placeholder="Search by skill, name or location..." oninput="renderWorkers()" aria-label="Search workers" />
+        <select id="workers-loc" onchange="renderWorkers()" aria-label="Filter by location">
+          <option>All India</option><option>Pune</option><option>Mumbai</option>
+          <option>Nashik</option><option>Nagpur</option><option>Aurangabad</option><option>Kolhapur</option>
+        </select>
+        <button onclick="renderWorkers()">Search</button>
+      </div>
+      <div class="pills" id="worker-pills" role="list" aria-label="Filter by skill"></div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="inner">
+      <div class="grid-4" id="workers-grid"></div>
+    </div>
+  </div>
+</main>
+
+<!-- ░░ POST JOB PAGE ░░ -->
+<main id="page-postjob" class="page hidden" role="main">
+  <div class="section">
+    <div class="inner" style="max-width:680px;">
+      <div class="sec-label">Employers</div>
+      <div class="sec-title" style="margin-bottom:.4rem;">Post a Job Opening</div>
+      <p style="color:var(--mu);margin-bottom:2rem;font-size:.88rem;">Find the right worker quickly. Your job will be visible to thousands of nearby workers.</p>
+      <div class="form-box">
+        <div class="form-grid">
+          <div class="form-row">
+            <div class="fgroup"><label class="flabel" for="pj-title">Job Title *</label><input class="finput" id="pj-title" placeholder="e.g. CNC Machine Operator" /></div>
+            <div class="fgroup"><label class="flabel" for="pj-industry">Industry Type</label>
+              <select class="fselect" id="pj-industry">
+                <option>Select Industry</option><option>Metal Fabrication</option><option>Automotive</option>
+                <option>Electronics</option><option>Heavy Engineering</option><option>General Manufacturing</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="fgroup"><label class="flabel" for="pj-loc">Location *</label>
+              <select class="fselect" id="pj-loc"><option>Pune</option><option>Mumbai</option><option>Nashik</option><option>Nagpur</option><option>Aurangabad</option><option>Kolhapur</option></select>
+            </div>
+            <div class="fgroup"><label class="flabel" for="pj-exp">Experience Required</label>
+              <select class="fselect" id="pj-exp"><option>Fresher OK</option><option>6 months+</option><option>1+ year</option><option>2+ years</option><option>3+ years</option><option>5+ years</option></select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="fgroup"><label class="flabel" for="pj-min">Min Salary (₹/month)</label><input class="finput" id="pj-min" type="number" placeholder="e.g. 18000" /></div>
+            <div class="fgroup"><label class="flabel" for="pj-max">Max Salary (₹/month)</label><input class="finput" id="pj-max" type="number" placeholder="e.g. 25000" /></div>
+          </div>
+          <div class="fgroup">
+            <label class="flabel">Required Skills *</label>
+            <div class="skill-chips" id="pj-skills"></div>
+          </div>
+          <div class="fgroup"><label class="flabel" for="pj-desc">Job Description</label><textarea class="ftextarea" id="pj-desc" placeholder="Describe the work, shift timings, tools used, any other requirements..."></textarea></div>
+          <div class="fgroup"><label class="flabel" for="pj-vac">Vacancies</label><input class="finput" id="pj-vac" type="number" value="1" min="1" /></div>
+          <div style="display:flex;gap:8px;align-items:center;">
+            <input type="checkbox" id="pj-urgent" style="accent-color:var(--pri);width:16px;height:16px;" />
+            <label for="pj-urgent" style="font-size:.86rem;color:var(--t2);cursor:pointer;">Mark as Urgent Hiring</label>
+          </div>
+          <button class="btn btn-primary btn-block btn-lg" onclick="submitJob()">Post Job →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ░░ DASHBOARD PAGE ░░ -->
+<main id="page-dashboard" class="page hidden" role="main">
+  <div class="dash-wrap">
+    <aside class="dash-side" aria-label="Dashboard navigation">
+      <div class="dash-user">
+        <div class="dash-avatar" id="dash-av">W</div>
+        <div><div class="dash-uname" id="dash-uname">Raju Patil</div><div class="dash-urole" id="dash-urole">CNC Operator</div></div>
+      </div>
+      <nav class="dash-nav" aria-label="Dashboard sections">
+        <button class="dash-link on" id="dl-overview" onclick="showDash('overview')"><span class="dash-icon">📊</span>Overview</button>
+        <button class="dash-link" id="dl-apps" onclick="showDash('apps')"><span class="dash-icon">📋</span><span id="dl-apps-label">My Applications</span></button>
+        <button class="dash-link" id="dl-profile" onclick="showDash('profile')"><span class="dash-icon">👤</span>My Profile</button>
+        <button class="dash-link" id="dl-notifs" onclick="showDash('notifs')"><span class="dash-icon">🔔</span>Notifications</button>
+        <div style="height:1px;background:var(--bd);margin:.5rem 0;"></div>
+        <button class="dash-link" onclick="showPage('chat')"><span class="dash-icon">💬</span>Messages</button>
+        <button class="dash-link" id="dl-browse" onclick="showPage('jobs')"><span class="dash-icon">🔍</span><span id="dl-browse-label">Browse Jobs</span></button>
+      </nav>
+    </aside>
+    <div class="dash-main" id="dash-content"></div>
+  </div>
+</main>
+
+<!-- ░░ CHAT PAGE ░░ -->
+<main id="page-chat" class="page hidden" role="main" aria-label="Chat">
+  <div class="chat-wrap">
+    <div class="chat-side">
+      <div class="chat-side-head">💬 Messages</div>
+      <div id="chat-contacts"></div>
+    </div>
+    <div class="chat-main-area">
+      <div class="chat-topbar" id="chat-topbar"></div>
+      <div class="chat-msgs" id="chat-msgs"></div>
+      <div class="chat-input-row">
+        <input class="chat-input" id="chat-input" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sendMsg()" aria-label="Type a message" />
+        <button class="chat-send" onclick="sendMsg()" aria-label="Send message">➤</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ░░ MODAL ░░ -->
+<div class="modal-ov hidden" id="modal" role="dialog" aria-modal="true" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close modal">✕</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<!-- ░░ TOAST ░░ -->
+<div class="toast hidden" id="toast" role="alert" aria-live="polite"></div>
+
+<script>
+// ══════════════════════════════════════════════════════
+// DATA
+// ══════════════════════════════════════════════════════
+const JOBS = [
+  {id:1,title:"CNC Machine Operator",company:"Precision Parts Ltd",loc:"Pune",salary:"₹22,000–28,000/mo",salaryNum:25000,skills:["CNC","G-Code","CAD"],exp:"2+ yrs",urgent:true,posted:"Today",type:"Full Time"},
+  {id:2,title:"Senior Welder (TIG/MIG)",company:"SteelFab Works",loc:"Mumbai",salary:"₹25,000–35,000/mo",salaryNum:30000,skills:["Welding","TIG","MIG"],exp:"3+ yrs",urgent:true,posted:"Today",type:"Full Time"},
+  {id:3,title:"Lathe Machine Operator",company:"Metal Components Co.",loc:"Nashik",salary:"₹18,000–24,000/mo",salaryNum:21000,skills:["Lathe","Turning"],exp:"1+ yr",urgent:false,posted:"2 days ago",type:"Full Time"},
+  {id:4,title:"Assembly Line Worker",company:"AutoAssemble Pvt Ltd",loc:"Aurangabad",salary:"₹14,000–18,000/mo",salaryNum:16000,skills:["Assembly","QC"],exp:"Fresher OK",urgent:false,posted:"3 days ago",type:"Full Time"},
+  {id:5,title:"Maintenance Technician",company:"PowerPlant Fabricators",loc:"Nagpur",salary:"₹20,000–28,000/mo",salaryNum:24000,skills:["Electrical","PLC"],exp:"2+ yrs",urgent:true,posted:"Yesterday",type:"Full Time"},
+  {id:6,title:"Quality Control Inspector",company:"Precision Parts Ltd",loc:"Pune",salary:"₹16,000–22,000/mo",salaryNum:19000,skills:["QC","ISO"],exp:"1+ yr",urgent:false,posted:"1 week ago",type:"Full Time"},
+  {id:7,title:"Hydraulic Press Operator",company:"IndoForge Industries",loc:"Kolhapur",salary:"₹19,000–25,000/mo",salaryNum:22000,skills:["Press","Die Setting"],exp:"2+ yrs",urgent:false,posted:"5 days ago",type:"Full Time"},
+  {id:8,title:"Factory Helper",company:"General Manufacturing Co.",loc:"Sangli",salary:"₹12,000–15,000/mo",salaryNum:13500,skills:["General Labour"],exp:"No exp needed",urgent:false,posted:"2 days ago",type:"Full Time"},
+];
+
+const WORKERS = [
+  {id:1,name:"Raju Patil",skill:"CNC Operator",loc:"Pune",exp:"5 years",rating:5,bg:"#dbeafe",col:"#2563eb",badge:"Top Rated"},
+  {id:2,name:"Suresh Yadav",skill:"Senior Welder",loc:"Mumbai",exp:"8 years",rating:5,bg:"#ede9fe",col:"#7c3aed",badge:"Verified"},
+  {id:3,name:"Anil Kumar",skill:"Lathe Operator",loc:"Nashik",exp:"3 years",rating:4,bg:"#dcfce7",col:"#16a34a",badge:null},
+  {id:4,name:"Priya Sharma",skill:"QC Inspector",loc:"Pune",exp:"4 years",rating:5,bg:"#fef9c3",col:"#a16207",badge:"Verified"},
+  {id:5,name:"Ramesh Gupta",skill:"Maintenance Tech",loc:"Nagpur",exp:"6 years",rating:4,bg:"#fee2e2",col:"#dc2626",badge:null},
+  {id:6,name:"Vijay Desai",skill:"Assembly Worker",loc:"Aurangabad",exp:"2 years",rating:4,bg:"#e0f2fe",col:"#0369a1",badge:null},
+];
+
+const SKILLS = ["Welding","CNC","Lathe","Assembly","QC","Electrical","Hydraulics","PLC","Turning","Milling","Grinding","Press","Fabrication","Painting"];
+const SKILL_FILTERS = ["All Skills","Welding","CNC","Lathe","Assembly","Maintenance","QC"];
+const WORKER_FILTERS = ["All","Welding","CNC","Lathe","Assembly","Technician"];
+
+const CHATS = [
+  {id:0,name:"Precision Parts Ltd",bg:"#dbeafe",col:"#2563eb",msgs:[
+    {me:false,text:"Hello! We reviewed your profile and are very interested.",time:"10:00 AM"},
+    {me:true,text:"Thank you! I am available immediately.",time:"10:05 AM"},
+    {me:false,text:"Great. When can you come for a trial?",time:"10:08 AM"},
+    {me:true,text:"I can come this Saturday morning.",time:"10:10 AM"},
+    {me:false,text:"When can you start?",time:"10:12 AM"},
+  ]},
+  {id:1,name:"SteelFab Works",bg:"#ede9fe",col:"#7c3aed",msgs:[
+    {me:false,text:"We received your application for Senior Welder.",time:"9:00 AM"},
+    {me:false,text:"Please bring your certificates when you visit.",time:"9:02 AM"},
+    {me:true,text:"Sure, I have my ITI and welding certification ready.",time:"9:15 AM"},
+  ]},
+  {id:2,name:"AutoAssemble Pvt",bg:"#dcfce7",col:"#16a34a",msgs:[
+    {me:false,text:"Interview confirmed for Monday 11 AM.",time:"Yesterday"},
+  ]},
+];
+
+// ══════════════════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════════════════
+let state = {
+  page: 'home',
+  loggedIn: false,
+  userType: 'worker',
+  jobSkillFilter: 'All Skills',
+  workerSkillFilter: 'All',
+  activeChatId: 0,
+  dashTab: 'overview',
+  chats: JSON.parse(JSON.stringify(CHATS)),
+};
+
+// ══════════════════════════════════════════════════════
+// NAVIGATION
+// ══════════════════════════════════════════════════════
+function showPage(pg) {
+  document.querySelectorAll('main[id^="page-"]').forEach(el => el.classList.add('hidden'));
+  document.getElementById('page-' + pg).classList.remove('hidden');
+  document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+  const nl = document.getElementById('nl-' + pg);
+  if (nl) nl.classList.add('active');
+  state.page = pg;
+  window.scrollTo(0, 0);
+  if (pg === 'dashboard') renderDash();
+  if (pg === 'chat') renderChat();
+  closeMobileNav();
+}
+
+function toggleMobileNav() {
+  const mn = document.getElementById('mobile-nav');
+  const hb = document.getElementById('hamburger');
+  const open = mn.classList.toggle('open');
+  hb.textContent = open ? '✕' : '☰';
+  hb.setAttribute('aria-expanded', open);
+}
+function closeMobileNav() {
+  document.getElementById('mobile-nav').classList.remove('open');
+  document.getElementById('hamburger').textContent = '☰';
+  document.getElementById('hamburger').setAttribute('aria-expanded', false);
+}
+
+// ══════════════════════════════════════════════════════
+// HELPERS
+// ══════════════════════════════════════════════════════
+function stars(n) {
+  return Array.from({length:5},(_,i)=>`<span style="color:${i<n?'#f59e0b':'#cbd5e1'}">${i<n?'★':'☆'}</span>`).join('');
+}
+
+function jobCard(j, compact) {
+  return `<article class="jcard" role="article" aria-label="${j.title} at ${j.company}">
+    <div class="jcard-top">
+      <div>
+        <div class="jcard-title">${j.title}</div>
+        <div class="jcard-co">🏭 ${j.company}</div>
+      </div>
+      <span class="badge ${j.urgent?'b-urgent':'b-open'}">${j.urgent?'🔴 Urgent':'✅ Open'}</span>
+    </div>
+    <div class="jcard-meta">
+      <span>📍 ${j.loc}</span><span>⏱️ ${j.exp}</span><span>🕐 ${j.posted}</span>
+    </div>
+    <div class="jcard-salary">${j.salary}</div>
+    <div class="jcard-tags">${j.skills.map(s=>`<span class="badge b-skill">${s}</span>`).join('')}</div>
+    <div class="jcard-foot">
+      <span style="font-size:.75rem;color:var(--mu);font-weight:500;">${j.type}</span>
+      <button class="btn btn-primary btn-sm" onclick="openModal('apply','${j.title}','${j.company}')">Apply Now →</button>
+    </div>
+  </article>`;
+}
+
+function workerCard(w) {
+  return `<article class="wcard" role="article" aria-label="${w.name}, ${w.skill}">
+    <div class="wavatar" style="background:${w.bg};color:${w.col};">${w.name[0]}</div>
+    ${w.badge?`<div style="margin-bottom:.4rem;"><span class="badge b-open">${w.badge}</span></div>`:''}
+    <div class="wname">${w.name}</div>
+    <div class="wskill">${w.skill}</div>
+    <div class="wloc">📍 ${w.loc} · ${w.exp}</div>
+    <div class="stars">${stars(w.rating)}</div>
+    <div style="display:flex;gap:6px;margin-top:.5rem;">
+      <button class="btn btn-light btn-sm" style="flex:1;font-size:.74rem;">Profile</button>
+      <button class="btn btn-primary btn-sm" style="flex:1;font-size:.74rem;" onclick="showPage('chat')">Contact</button>
+    </div>
+  </article>`;
+}
+
+function showToast(msg, color) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.style.background = color || 'var(--ok)';
+  t.classList.remove('hidden');
+  setTimeout(()=> t.classList.add('hidden'), 3500);
+}
+
+// ══════════════════════════════════════════════════════
+// HOME PAGE RENDER
+// ══════════════════════════════════════════════════════
+function renderHome() {
+  document.getElementById('home-jobs-grid').innerHTML = JOBS.slice(0,6).map(j=>jobCard(j)).join('');
+  document.getElementById('home-workers-grid').innerHTML = WORKERS.map(w=>workerCard(w)).join('');
+
+  // Home filter pills behavior
+  document.querySelectorAll('#page-home .pill').forEach(pill => {
+    pill.addEventListener('click', function() {
+      document.querySelectorAll('#page-home .pill').forEach(p => p.classList.remove('on'));
+      this.classList.add('on');
+    });
+  });
+}
+
+// ══════════════════════════════════════════════════════
+// JOBS PAGE
+// ══════════════════════════════════════════════════════
+function initSkillPills() {
+  const container = document.getElementById('skill-pills');
+  container.innerHTML = SKILL_FILTERS.map(f =>
+    `<span class="pill ${f===state.jobSkillFilter?'on':''}" onclick="setJobFilter('${f}')" role="listitem" tabindex="0">${f}</span>`
+  ).join('');
+}
+
+function setJobFilter(f) {
+  state.jobSkillFilter = f;
+  initSkillPills();
+  renderJobs();
+}
+
+function renderJobs() {
+  const search = (document.getElementById('jobs-search')?.value||'').toLowerCase();
+  const loc = document.getElementById('jobs-loc')?.value||'All India';
+  const sort = document.getElementById('jobs-sort')?.value||'Latest First';
+
+  let list = JOBS.filter(j => {
+    const ms = !search || j.title.toLowerCase().includes(search) || j.skills.some(s=>s.toLowerCase().includes(search));
+    const mf = state.jobSkillFilter==='All Skills' || j.skills.some(s=>s.toLowerCase().includes(state.jobSkillFilter.toLowerCase()));
+    const ml = loc==='All India' || j.loc===loc;
+    return ms && mf && ml;
+  });
+
+  if (sort==='Salary: High to Low') list = [...list].sort((a,b)=>b.salaryNum-a.salaryNum);
+
+  document.getElementById('jobs-count').textContent = `${list.length} job${list.length!==1?'s':''} found`;
+  const grid = document.getElementById('jobs-grid');
+  if (list.length===0) {
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--mu);">
+      <div style="font-size:2.5rem;margin-bottom:1rem;">🔍</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.5rem;text-transform:uppercase;color:var(--tx);margin-bottom:.5rem;">No Jobs Found</div>
+      <div style="font-size:.88rem;">Try changing your search or filter criteria</div>
+    </div>`;
+  } else {
+    grid.innerHTML = list.map(j=>jobCard(j)).join('');
+  }
+}
+
+// ══════════════════════════════════════════════════════
+// WORKERS PAGE
+// ══════════════════════════════════════════════════════
+function initWorkerPills() {
+  const container = document.getElementById('worker-pills');
+  container.innerHTML = WORKER_FILTERS.map(f =>
+    `<span class="pill ${f===state.workerSkillFilter?'on':''}" onclick="setWorkerFilter('${f}')" role="listitem" tabindex="0">${f}</span>`
+  ).join('');
+}
+
+function setWorkerFilter(f) {
+  state.workerSkillFilter = f;
+  initWorkerPills();
+  renderWorkers();
+}
+
+function renderWorkers() {
+  const search = (document.getElementById('workers-search')?.value||'').toLowerCase();
+  const loc = document.getElementById('workers-loc')?.value||'All India';
+
+  let list = WORKERS.filter(w => {
+    const ms = !search || w.name.toLowerCase().includes(search) || w.skill.toLowerCase().includes(search) || w.loc.toLowerCase().includes(search);
+    const mf = state.workerSkillFilter==='All' || w.skill.toLowerCase().includes(state.workerSkillFilter.toLowerCase());
+    const ml = loc==='All India' || w.loc===loc;
+    return ms && mf && ml;
+  });
+
+  document.getElementById('workers-grid').innerHTML = list.length
+    ? list.map(w=>workerCard(w)).join('')
+    : `<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--mu);">
+        <div style="font-size:2.5rem;margin-bottom:1rem;">👤</div>
+        <div style="font-size:.88rem;">No workers found matching your search</div>
+      </div>`;
+}
+
+// ══════════════════════════════════════════════════════
+// POST JOB
+// ══════════════════════════════════════════════════════
+function initPostJob() {
+  const container = document.getElementById('pj-skills');
+  if (!container) return;
+  container.innerHTML = SKILLS.map(s =>
+    `<span class="chip" onclick="this.classList.toggle('on')" tabindex="0">${s}</span>`
+  ).join('');
+}
+
+function submitJob() {
+  const title = document.getElementById('pj-title')?.value?.trim();
+  if (!title) { showToast('⚠️ Please enter a job title', '#d97706'); return; }
+  showToast('✅ Job posted! Workers will be notified shortly.');
+}
+
+// ══════════════════════════════════════════════════════
+// DASHBOARD
+// ══════════════════════════════════════════════════════
+function showDash(tab) {
+  state.dashTab = tab;
+  document.querySelectorAll('.dash-link').forEach(l => l.classList.remove('on'));
+  const el = document.getElementById('dl-' + tab);
+  if (el) el.classList.add('on');
+  renderDash();
+}
+
+function renderDash() {
+  const isWorker = state.userType === 'worker';
+  const container = document.getElementById('dash-content');
+  const tab = state.dashTab;
+
+  // Update sidebar labels
+  document.getElementById('dl-apps-label').textContent = isWorker ? 'My Applications' : 'Posted Jobs';
+  document.getElementById('dl-browse-label').textContent = isWorker ? 'Browse Jobs' : 'Post New Job';
+  const browseBtn = document.getElementById('dl-browse');
+  if (browseBtn) browseBtn.onclick = () => showPage(isWorker ? 'jobs' : 'postjob');
+
+  if (tab === 'overview') {
+    const stats = isWorker
+      ? [['5','Applications Sent'],['2','Interview Calls'],['1','Job Offers'],['98%','Profile Views ↑']]
+      : [['12','Applications Received'],['3','Jobs Posted'],['8','Workers Shortlisted'],['24hr','Avg Response']];
+
+    container.innerHTML = `
+      <div class="dash-title">Welcome back, ${isWorker?'Raju':'Precision Parts'}! 👋</div>
+      <div class="dash-sub">Here's what's happening today.</div>
+      <div class="stat-cards">${stats.map(([n,l])=>`<div class="scard"><div class="scard-num">${n}</div><div class="scard-lbl">${l}</div></div>`).join('')}</div>
+      ${isWorker ? `
+        <div class="card" style="margin-bottom:1.25rem;">
+          <div class="sec-label" style="margin-bottom:.5rem;">Profile Strength</div>
+          <div style="display:flex;align-items:center;gap:1rem;">
+            <div class="prog-wrap"><div class="prog-bar" style="width:75%;"></div></div>
+            <span style="font-size:.85rem;font-weight:700;color:var(--pri);">75%</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--mu);margin-top:6px;">Upload a skill video to reach 100%</div>
+        </div>
+        <div class="card">
+          <div class="sec-label" style="margin-bottom:.75rem;">Recommended Jobs</div>
+          ${JOBS.slice(0,3).map(j=>`
+            <div class="list-row">
+              <div><div style="font-weight:600;font-size:.88rem;color:var(--tx);">${j.title}</div><div style="font-size:.76rem;color:var(--mu);">${j.company} · ${j.loc}</div></div>
+              <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
+                <span style="color:var(--pri);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.95rem;">${j.salary.split('–')[0]}</span>
+                <button class="btn btn-primary btn-sm" onclick="openModal('apply','${j.title}','${j.company}')">Apply</button>
+              </div>
+            </div>`).join('')}
+        </div>` :
+      `<div class="card">
+          <div class="sec-label" style="margin-bottom:.75rem;">Recent Applications</div>
+          ${WORKERS.slice(0,4).map(w=>`
+            <div class="list-row">
+              <div style="display:flex;align-items:center;gap:10px;">
+                <div style="width:36px;height:36px;border-radius:50%;background:${w.bg};color:${w.col};display:grid;place-items:center;font-weight:700;font-size:.85rem;flex-shrink:0;">${w.name[0]}</div>
+                <div><div style="font-weight:600;font-size:.88rem;color:var(--tx);">${w.name}</div><div style="font-size:.76rem;color:var(--mu);">${w.skill} · ${w.exp}</div></div>
+              </div>
+              <div style="display:flex;gap:6px;flex-shrink:0;">
+                <button class="btn btn-light btn-sm" onclick="showToast('Rejected ❌','var(--er)')">Reject</button>
+                <button class="btn btn-success btn-sm" onclick="showToast('✅ Worker shortlisted!')">Shortlist ✓</button>
+              </div>
+            </div>`).join('')}
+        </div>`}`;
+  }
+
+  else if (tab === 'apps') {
+    if (isWorker) {
+      const appStatus = ['Pending','Shortlisted','Pending','Shortlisted','Rejected'];
+      const appClass = ['b-exp','b-open','b-exp','b-open','b-urgent'];
+      container.innerHTML = `
+        <div class="dash-title">My Applications</div>
+        <div class="dash-sub"> </div>
+        <div class="tabs">
+          <button class="tab on">All (5)</button>
+          <button class="tab">Pending (2)</button>
+          <button class="tab">Shortlisted (2)</button>
+          <button class="tab">Rejected (1)</button>
+        </div>
+        <div class="card">
+          ${JOBS.slice(0,5).map((j,i)=>`
+            <div class="list-row">
+              <div><div style="font-weight:600;font-size:.88rem;color:var(--tx);">${j.title}</div><div style="font-size:.76rem;color:var(--mu);">${j.company} · Applied ${j.posted}</div></div>
+              <span class="badge ${appClass[i]}">${appStatus[i]}</span>
+            </div>`).join('')}
+        </div>`;
+    } else {
+      container.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem;">
+          <div><div class="dash-title">Posted Jobs</div><div class="dash-sub"> </div></div>
+          <button class="btn btn-primary btn-sm" onclick="showPage('postjob')">+ Post New Job</button>
+        </div>
+        ${JOBS.slice(0,3).map(j=>`
+          <div class="card" style="margin-bottom:1rem;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem;">
+              <div><div class="jcard-title">${j.title}</div><div style="font-size:.78rem;color:var(--mu);margin-top:3px;">📍 ${j.loc} · ${j.salary}</div></div>
+              <span class="badge ${j.urgent?'b-urgent':'b-open'}">${j.urgent?'🔴 Urgent':'✅ Active'}</span>
+            </div>
+            <div style="display:flex;gap:1.25rem;margin-top:.9rem;font-size:.8rem;color:var(--mu);">
+              <span>👥 ${Math.floor(Math.random()*15)+2} Applicants</span>
+              <span>👁️ ${Math.floor(Math.random()*100)+20} Views</span>
+            </div>
+            <div style="display:flex;gap:8px;margin-top:1rem;flex-wrap:wrap;">
+              <button class="btn btn-light btn-sm">Edit</button>
+              <button class="btn btn-outline btn-sm">View Applicants</button>
+              <button class="btn btn-light btn-sm" style="color:var(--er);" onclick="showToast('Job closed','#dc2626')">Close Job</button>
+            </div>
+          </div>`).join('')}`;
+    }
+  }
+
+  else if (tab === 'profile') {
+    container.innerHTML = `
+      <div class="dash-title">My Profile</div>
+      <div class="dash-sub"> </div>
+      <div class="card">
+        <div style="display:flex;gap:1.5rem;align-items:flex-start;flex-wrap:wrap;">
+          <div style="width:76px;height:76px;border-radius:50%;background:var(--pli);color:var(--pri);display:grid;place-items:center;font-size:1.8rem;font-weight:800;border:2px solid rgba(37,99,235,.25);flex-shrink:0;">${isWorker?'R':'P'}</div>
+          <div style="flex:1;min-width:200px;">
+            <div class="form-grid">
+              <div class="form-row">
+                <div class="fgroup"><label class="flabel">Full Name</label><input class="finput" value="${isWorker?'Raju Patil':'Precision Parts Ltd'}" /></div>
+                <div class="fgroup"><label class="flabel">Phone</label><input class="finput" value="+91 98765 43210" /></div>
+              </div>
+              <div class="form-row">
+                <div class="fgroup"><label class="flabel">Location</label><input class="finput" value="${isWorker?'Pune, Maharashtra':'Pune, Maharashtra'}" /></div>
+                <div class="fgroup"><label class="flabel">Experience</label><input class="finput" value="${isWorker?'5 years':'Est. 2010'}" /></div>
+              </div>
+              ${isWorker?`
+              <div class="fgroup">
+                <label class="flabel">Skills</label>
+                <div class="skill-chips" style="margin-top:4px;">
+                  ${['CNC','G-Code','CAD','Lathe','Milling'].map(s=>`<span class="chip on">${s}</span>`).join('')}
+                </div>
+              </div>
+              <div class="fgroup">
+                <label class="flabel">Skill Demonstration Video</label>
+                <div class="vid-ph">
+                  <div style="font-size:1.8rem;">🎥</div>
+                  <div style="font-size:.8rem;color:var(--mu);">Upload a 1-2 minute skill demo video</div>
+                  <button class="btn btn-outline btn-sm">Choose Video</button>
+                </div>
+              </div>`:''}
+              <button class="btn btn-primary" onclick="showToast('✅ Profile saved successfully!')">Save Profile</button>
+            </div>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  else if (tab === 'notifs') {
+    const notifs = [
+      ['🏭','New job match: CNC Operator at Precision Parts Ltd, Pune','10 min ago',true],
+      ['💬','SteelFab Works sent you a message','1 hour ago',true],
+      ['✅','Your application was shortlisted by AutoAssemble Pvt Ltd','3 hours ago',false],
+      ['🔔','2 new jobs matching your skills posted in Pune','Yesterday',false],
+      ['📋','Your profile was viewed by 5 employers today','2 days ago',false],
+    ];
+    container.innerHTML = `
+      <div class="dash-title">Notifications</div>
+      <div class="dash-sub"> </div>
+      <div class="card">
+        ${notifs.map(([icon,text,time,isNew])=>`
+          <div class="list-row">
+            <div style="display:flex;gap:12px;align-items:flex-start;">
+              <div style="font-size:1.2rem;margin-top:1px;flex-shrink:0;">${icon}</div>
+              <div>
+                <div style="font-size:.86rem;font-weight:${isNew?600:400};color:${isNew?'var(--tx)':'var(--t2)'};">${text}</div>
+                <div style="font-size:.73rem;color:var(--mu);margin-top:3px;">${time}</div>
+              </div>
+            </div>
+            ${isNew?`<span class="notif-dot"></span>`:''}
+          </div>`).join('')}
+      </div>`;
+  }
+}
+
+// ══════════════════════════════════════════════════════
+// CHAT
+// ══════════════════════════════════════════════════════
+function renderChat() {
+  const contactsEl = document.getElementById('chat-contacts');
+  contactsEl.innerHTML = state.chats.map((c,i) =>
+    `<div class="chat-contact ${i===state.activeChatId?'on':''}" onclick="setActiveChat(${i})" tabindex="0" role="button" aria-label="Chat with ${c.name}">
+      <div class="chat-av" style="background:${c.bg};color:${c.col};">${c.name[0]}</div>
+      <div style="overflow:hidden;">
+        <div class="chat-cname">${c.name}</div>
+        <div class="chat-cprev">${c.msgs[c.msgs.length-1]?.text||''}</div>
+      </div>
+    </div>`
+  ).join('');
+
+  renderChatMessages();
+}
+
+function setActiveChat(id) {
+  state.activeChatId = id;
+  renderChat();
+}
+
+function renderChatMessages() {
+  const chat = state.chats[state.activeChatId];
+  const topbar = document.getElementById('chat-topbar');
+  topbar.innerHTML = `
+    <div class="chat-av" style="background:${chat.bg};color:${chat.col};">${chat.name[0]}</div>
+    <div>
+      <div style="font-weight:700;font-size:.92rem;color:var(--tx);">${chat.name}</div>
+      <div class="chat-online">● Online</div>
+    </div>`;
+
+  const msgsEl = document.getElementById('chat-msgs');
+  msgsEl.innerHTML = chat.msgs.map(m => `
+    <div class="msg-wrap ${m.me?'me':'them'}">
+      ${!m.me?`<div class="chat-av" style="background:${chat.bg};color:${chat.col};width:30px;height:30px;font-size:.72rem;">${chat.name[0]}</div>`:''}
+      <div>
+        <div class="msg-bub">${m.text}</div>
+        <div class="msg-time">${m.time}</div>
+      </div>
+    </div>`).join('');
+  msgsEl.scrollTop = msgsEl.scrollHeight;
+}
+
+function sendMsg() {
+  const input = document.getElementById('chat-input');
+  const text = input.value.trim();
+  if (!text) return;
+  const now = new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
+  state.chats[state.activeChatId].msgs.push({me:true,text,time:now});
+  input.value = '';
+  renderChatMessages();
+  renderChat();
+}
+
+// ══════════════════════════════════════════════════════
+// MODALS
+// ══════════════════════════════════════════════════════
+function openModal(type, jobTitle, jobCo) {
+  const modal = document.getElementById('modal');
+  const content = document.getElementById('modal-content');
+  modal.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+
+  if (type === 'login') {
+    content.innerHTML = `
+      <div class="form-title">Welcome Back</div>
+      <div class="form-sub">Login to your Worker Connections account</div>
+      <div class="form-grid">
+        <div class="fgroup"><label class="flabel" for="m-phone">Phone Number</label><input class="finput" id="m-phone" type="tel" placeholder="+91 XXXXX XXXXX" autocomplete="tel" /></div>
+        <div class="fgroup"><label class="flabel" for="m-pass">Password</label><input class="finput" id="m-pass" type="password" placeholder="Enter password" autocomplete="current-password" /></div>
+        <button class="btn btn-primary btn-block btn-lg" onclick="doLogin()">Login →</button>
+      </div>
+      <div class="fswitch">Don't have an account? <a onclick="openModal('register')">Register Free</a></div>`;
+  }
+  else if (type === 'apply') {
+    const jt = jobTitle || 'CNC Machine Operator';
+    const jc = jobCo || 'Precision Parts Ltd';
+    content.innerHTML = `
+      <div class="form-title">Apply for Job</div>
+      <div class="form-sub">${jt} — ${jc}</div>
+      <div class="form-grid">
+        <div class="fgroup"><label class="flabel" for="ap-name">Your Name *</label><input class="finput" id="ap-name" placeholder="Full name" /></div>
+        <div class="fgroup"><label class="flabel" for="ap-phone">Phone Number *</label><input class="finput" id="ap-phone" type="tel" placeholder="+91 XXXXX XXXXX" /></div>
+        <div class="fgroup"><label class="flabel" for="ap-loc">Current Location</label><input class="finput" id="ap-loc" placeholder="City, State" /></div>
+        <div class="fgroup"><label class="flabel" for="ap-exp">Experience</label>
+          <select class="fselect" id="ap-exp"><option value="">Select</option><option>Fresher</option><option>1-2 years</option><option>3-5 years</option><option>5+ years</option></select>
+        </div>
+        <div class="fgroup"><label class="flabel" for="ap-note">Why should we hire you? (Optional)</label><textarea class="ftextarea" id="ap-note" placeholder="Brief note about your experience..."></textarea></div>
+        <button class="btn btn-primary btn-block btn-lg" onclick="submitApply()">Submit Application →</button>
+      </div>`;
+  }
+  else {
+    // register
+    let regUserType = 'worker';
+    const renderRegister = () => {
+      content.innerHTML = `
+        <div class="form-title">Create Account</div>
+        <div class="form-sub">Free registration. Start in 2 minutes.</div>
+        <div class="type-toggle">
+          <button class="type-btn ${regUserType==='worker'?'on':''}" onclick="regUserType='worker';renderReg()">👷 I'm a Worker</button>
+          <button class="type-btn ${regUserType==='employer'?'on':''}" onclick="regUserType='employer';renderReg()">🏭 I'm an Employer</button>
+        </div>
+        <div class="form-grid">
+          ${regUserType==='worker'?`
+            <div class="form-row">
+              <div class="fgroup"><label class="flabel" for="rg-name">Full Name *</label><input class="finput" id="rg-name" placeholder="Your name" /></div>
+              <div class="fgroup"><label class="flabel" for="rg-phone">Phone *</label><input class="finput" id="rg-phone" type="tel" placeholder="+91 XXXXX" /></div>
+            </div>
+            <div class="fgroup"><label class="flabel" for="rg-loc">Location *</label>
+              <select class="fselect" id="rg-loc"><option>Pune</option><option>Mumbai</option><option>Nashik</option><option>Nagpur</option><option>Aurangabad</option><option>Kolhapur</option></select>
+            </div>
+            <div class="fgroup"><label class="flabel" for="rg-skill">Primary Skill *</label>
+              <select class="fselect" id="rg-skill"><option value="">Select skill</option>${SKILLS.map(s=>`<option>${s}</option>`).join('')}</select>
+            </div>
+            <div class="fgroup">
+              <label class="flabel">Your Skills</label>
+              <div class="skill-chips" style="margin-top:4px;">${SKILLS.slice(0,8).map(s=>`<span class="chip" onclick="this.classList.toggle('on')">${s}</span>`).join('')}</div>
+            </div>
+            <div class="fgroup"><label class="flabel" for="rg-pass">Password *</label><input class="finput" id="rg-pass" type="password" placeholder="Create password" autocomplete="new-password" /></div>`
+          :`
+            <div class="fgroup"><label class="flabel" for="rg-co">Company Name *</label><input class="finput" id="rg-co" placeholder="Company name" /></div>
+            <div class="form-row">
+              <div class="fgroup"><label class="flabel" for="rg-ind">Industry</label>
+                <select class="fselect" id="rg-ind"><option>Fabrication</option><option>Automotive</option><option>Electronics</option><option>Engineering</option></select>
+              </div>
+              <div class="fgroup"><label class="flabel" for="rg-loc">Location *</label>
+                <select class="fselect" id="rg-loc"><option>Pune</option><option>Mumbai</option><option>Nashik</option><option>Nagpur</option><option>Aurangabad</option><option>Kolhapur</option></select>
+              </div>
+            </div>
+            <div class="fgroup"><label class="flabel" for="rg-phone">Contact Phone *</label><input class="finput" id="rg-phone" type="tel" placeholder="+91 XXXXX XXXXX" /></div>
+            <div class="fgroup"><label class="flabel" for="rg-pass">Password *</label><input class="finput" id="rg-pass" type="password" placeholder="Create password" autocomplete="new-password" /></div>`}
+          <button class="btn btn-primary btn-block btn-lg" onclick="doRegister('${regUserType}')">Create Free Account →</button>
+        </div>
+        <div class="fswitch">Already have an account? <a onclick="openModal('login')">Login</a></div>`;
+      // Re-bind the type buttons after re-render
+      content.querySelectorAll('.type-btn').forEach((btn, i) => {
+        btn.onclick = () => { regUserType = i===0?'worker':'employer'; renderRegister(); };
+      });
+    };
+    window.renderReg = renderRegister;
+    renderRegister();
+  }
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.add('hidden');
+  document.body.style.overflow = '';
+}
+
+function doLogin() {
+  const phone = document.getElementById('m-phone')?.value?.trim();
+  const pass = document.getElementById('m-pass')?.value?.trim();
+  if (!phone || !pass) { showToast('⚠️ Please fill in all fields','#d97706'); return; }
+  state.loggedIn = true;
+  state.userType = 'worker';
+  afterLogin();
+}
+
+function doRegister(utype) {
+  const name = document.getElementById('rg-name')?.value?.trim() || document.getElementById('rg-co')?.value?.trim();
+  const phone = document.getElementById('rg-phone')?.value?.trim();
+  const pass = document.getElementById('rg-pass')?.value?.trim();
+  if (!name || !phone || !pass) { showToast('⚠️ Please fill in all required fields','#d97706'); return; }
+  state.loggedIn = true;
+  state.userType = utype;
+  afterLogin();
+}
+
+function submitApply() {
+  const name = document.getElementById('ap-name')?.value?.trim();
+  const phone = document.getElementById('ap-phone')?.value?.trim();
+  if (!name || !phone) { showToast('⚠️ Name and phone are required','#d97706'); return; }
+  closeModal();
+  showToast('✅ Application submitted successfully!');
+}
+
+function afterLogin() {
+  closeModal();
+  // Update nav
+  document.getElementById('btn-login').classList.add('hidden');
+  document.getElementById('btn-register').classList.add('hidden');
+  document.getElementById('nav-avatar-btn').classList.remove('hidden');
+  document.getElementById('nav-avatar-btn').textContent = state.userType==='worker'?'W':'E';
+  document.getElementById('nl-dashboard').classList.remove('hidden');
+  document.getElementById('nl-chat').classList.remove('hidden');
+  document.getElementById('mn-dashboard').classList.remove('hidden');
+  document.getElementById('mn-chat').classList.remove('hidden');
+  // Update dashboard user info
+  document.getElementById('dash-av').textContent = state.userType==='worker'?'R':'P';
+  document.getElementById('dash-uname').textContent = state.userType==='worker'?'Raju Patil':'Precision Parts Ltd';
+  document.getElementById('dash-urole').textContent = state.userType==='worker'?'CNC Operator':'Manufacturer';
+  showPage('dashboard');
+  showToast(`✅ Welcome! Logged in as ${state.userType==='worker'?'Worker':'Employer'}`);
+}
+
+// ══════════════════════════════════════════════════════
+// PILL TOGGLE (HOME)
+// ══════════════════════════════════════════════════════
+document.querySelectorAll('#page-home .pill').forEach(pill => {
+  pill.addEventListener('click', function() {
+    this.closest('.pills').querySelectorAll('.pill').forEach(p => p.classList.remove('on'));
+    this.classList.add('on');
+  });
+});
+
+// Close modal on Escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+// ══════════════════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════════════════
+renderHome();
+initSkillPills();
+renderJobs();
+initWorkerPills();
+renderWorkers();
+initPostJob();
+</script>
+</body>
+</html>
